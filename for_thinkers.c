@@ -59,33 +59,7 @@ void* eat0(int* pName)
 	}
 	printf("Ph %d is fed and now will only think\n", name);
 }
-void* eat1(int* pName)
-{
-	int name = *pName;
-	while (Thinkers_hunger[name] > 0){
-		int t;
-		if (tryget_Lfork(name) != 0){
-			put_Rfork(name);
-			t = rand()%5+1;
-			printf("Ph %d is thinking %d sec\n", name, t);
-			sleep(t);
-		}
-		if (tryget_Rfork(name) != 0){
-			put_Lfork(name);
-			t = rand()%5+1;
-			printf("Ph %d is thinking %d sec\n", name, t);
-			sleep(t);
-		}
-		Thinkers_hunger[name]--;
-		printf("Ph %d is eating %d sec, hunger left: %d\n", name, 3, Thinkers_hunger[name]);
-		sleep(3);
-		put_Lfork(name);
-		put_Rfork(name);
-		printf("Ph %d is thinking %d sec\n", name, 3);
-		sleep(3);
-	}
-	printf("Ph %d is fed and now will only think\n", name);
-}
+
 
 int main()
 {
