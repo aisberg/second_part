@@ -63,11 +63,11 @@ void* eat0(int* pName)
 
 int main()
 {
-	int Hunger, algo, *Nums;
+	int Hunger, algo = 0, *Nums;
 	pthread_t* P;
 	while (1){
-		printf("Please, enter count of thinkers, type of algorithm(0 or 1) and their hunger:\n");
-		scanf("%d%d%d", &N, &algo, &Hunger);
+		printf("Please, enter count of thinkers and their hunger:\n");
+		scanf("%d%d", &N, &Hunger);
 		if (N == 0) break;
 	
 		Forks = (pthread_mutex_t*)malloc(N * sizeof(pthread_mutex_t));
