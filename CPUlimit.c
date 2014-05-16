@@ -1,3 +1,11 @@
+//
+// main.c
+// CPU
+//
+// Created by Макс on 24.03.14.
+// Copyright (c) 2014 Максим Никитин. All rights reserved.
+//
+
 #include<stdio.h>
 #include<fcntl.h>
 #include<signal.h>
