@@ -41,15 +41,15 @@ void put_Rfork(int name)
 
 
 
-int tryget_Lfork(int name)
+/*int tryget_Lfork(int name)
 {
 	if (name == 0)  return pthread_mutex_lock(Forks + N - 1);
-	else            return pthread_mutex_lock(Forks + name - 1);
+	else            return pthread_mutex_lock(Forks + name - 1);  // lishnee, provrka vishe
 }
 int tryget_Rfork(int name)
 {
 	return pthread_mutex_lock(Forks + name);
-}
+}*/
 
 void* eat0(int* pName)
 {
