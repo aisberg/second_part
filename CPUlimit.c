@@ -36,12 +36,12 @@ void CPUlimit(int argc, char **argv) {
         
 		while(1) {
 			usleep(limit);
-			if(kill(PID, SIGSTOP) == -1){
+			if(kill(PID, SIGSTOP) == -1){    //stop
                 perror("Sorry! kill1 was failed");
                 exit(0);
             }
 			usleep(1000000 - limit);
-			if(kill(PID, SIGCONT) == -1){
+			if(kill(PID, SIGCONT) == -1){   //continue
                 perror("Sorry! kill2 was failed");
                 exit(0);
             }
