@@ -1,3 +1,11 @@
+//
+// main.c
+// for_thinkers
+//
+// Created by Макс on 24.03.14.
+// Copyright (c) 2014 Максим Никитин. All rights reserved.
+//
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
